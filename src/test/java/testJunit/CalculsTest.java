@@ -22,7 +22,7 @@ class CalculsTest {
 	/**
 	 * Initialise les valeurs avant chaque test 
 	 */
-	@BeforeEach // Déclencher cette méthode avant l'ex�cution
+	@BeforeEach // Déclencher cette méthode avant l'exécution
 	void setUp() throws Exception 
 	{
 		c1 = new Calculs(1,2);
@@ -50,7 +50,7 @@ class CalculsTest {
 		}
 
 		
-		// Est ce que (2 == 42) ? non donc : test en Erreur
+		// Est ce que (2 == 2) ? non donc : test en Erreur
 		assertEquals(c1.multiplier(), 2, "Methode multiplier non conforme 2*1=2 ne fonctionne pas.");
 
 	}
@@ -74,7 +74,7 @@ class CalculsTest {
 		}
 
 		
-		// Est ce que (2 == 42) ? non donc : test en Erreur
+		// Est ce que (2 == 3) ? non donc : test en Erreur
 		assertEquals(c1.additioner(), 3, "Methode additionner non conforme 2+1=3 ne fonctionne pas.");
 	}
 
