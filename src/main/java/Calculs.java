@@ -1,4 +1,4 @@
-package testJunit;
+
 
 public class Calculs {
 
