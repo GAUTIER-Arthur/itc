@@ -83,15 +83,47 @@ class CalculsTest {
 	 */
 	@Test
 	void testDiviser() {
-		fail("Not yet implemented");
+		if (c1.diviser() != 0.5)
+		{
+			fail("Methode additionner non conforme 1/2=0.5 ne fonctionne pas.");
+		}
+		if (c2.diviser() != 0.5)
+		{
+			fail("Methode additionner non conforme 10/20=0.5 ne fonctionne pas.");			
+		}
+		if (c3.diviser() != 0.5)
+		{
+			fail("Methode additionner non conforme 100/200=0.5 ne fonctionne pas.");			
+		}
+
+		
+		// Est ce que (2 == 3) ? non donc : test en Erreur
+		assertEquals(c1.diviser(), 0.5, "Methode additionner non conforme 1/2=0.5 ne fonctionne pas.");
 	}
+	
 
 	/**
 	 * Test method for {@link Calculs#soustraire()}.
 	 */
 	@Test
 	void testSoustraire() {
-		fail("Not yet implemented");
+		if (c1.soustraire() != -1)
+		{
+			fail("Methode additionner non conforme 1/2=-1 ne fonctionne pas.");
+		}
+		if (c2.soustraire() != -10)
+		{
+			fail("Methode additionner non conforme 10/20=-10 ne fonctionne pas.");			
+		}
+		if (c3.soustraire() != -100)
+		{
+			fail("Methode additionner non conforme 100-200=-100 ne fonctionne pas.");			
+		}
+
+		
+		// Est ce que (2 == 3) ? non donc : test en Erreur
+		assertEquals(c1.soustraire(), -1, "Methode additionner non conforme 1-2=-1 ne fonctionne pas.");
 	}
+	
 
 }
