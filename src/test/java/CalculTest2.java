@@ -36,7 +36,7 @@ class CalculsTest2 {
 	        assertNull(n);
 	}
 	
-	// Données multiply
+	// Données add
     static Stream<Arguments> testValueAdd() throws Throwable 
     {
         return Stream.of(
@@ -48,12 +48,35 @@ class CalculsTest2 {
 
 @ParameterizedTest(name="Addition numéro {index}: nombre1={0}, nombre2={1}, résultat attendu = {2}")
 	@MethodSource("testValueAdd")
-	void testAddictioner(int firstNumber, int secondNumber, int expectedResult) 
+	void testAdditioner(int firstNumber, int secondNumber, int expectedResult) 
 	{
 		// Partie paramétrée
 	        Calculs monCal = new Calculs(firstNumber, secondNumber);
 	        assertEquals(expectedResult, monCal.additioner(), "test en échec pour " + firstNumber + " * " + secondNumber + " != " + expectedResult); 
 
+	    // Partie indépendante (les paramètres peuvent ne servir qu'à une sous partie des tests)
+	        String n = null;
+	        assertNull(n);
+	}
+
+	//Données subtract
+	static Stream<Arguments> testValueSubtract() throws Throwable 
+	{
+	    return Stream.of(
+	        Arguments.of(2,2,0), // appellera : testMultiplier(2,2,4)
+	        Arguments.of(6,6,0),
+	        Arguments.of(3,2,1)
+	    );
+	}
+	
+	@ParameterizedTest(name="Soustraction numéro {index}: nombre1={0}, nombre2={1}, résultat attendu = {2}")
+	@MethodSource("testValueSubtract")
+	void testSoustraire(int firstNumber, int secondNumber, int expectedResult) 
+	{
+		// Partie paramétrée
+	        Calculs monCal = new Calculs(firstNumber, secondNumber);
+	        assertEquals(expectedResult, monCal.soustraire(), "test en échec pour " + firstNumber + " * " + secondNumber + " != " + expectedResult); 
+	
 	    // Partie indépendante (les paramètres peuvent ne servir qu'à une sous partie des tests)
 	        String n = null;
 	        assertNull(n);
