@@ -94,7 +94,7 @@ class CalculsTest2 {
 		
 		@ParameterizedTest(name="Division numéro {index}: nombre1={0}, nombre2={1}, résultat attendu = {2}")
 		@MethodSource("testValueDivide")
-		void testDiviser(int firstNumber, int secondNumber, int expectedResult) 
+		void testDiviser(int firstNumber, int secondNumber, float expectedResult) 
 		{
 			// Partie paramétrée
 		        Calculs monCal = new Calculs(firstNumber, secondNumber);
