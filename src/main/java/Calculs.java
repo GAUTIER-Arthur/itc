@@ -22,8 +22,8 @@ public class Calculs {
 		return (this.i-this.j);
 	}
 	
-	public float diviser() {
-		return  (float)(this.i/this.j);
+	public double diviser() {
+		return ((float)this.i/(float)this.j);
 	}
 
 }
